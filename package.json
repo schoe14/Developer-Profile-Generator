@@ -1,0 +1,28 @@
+{
+  "name": "Developer-Profile-Generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.19.1",
+    "fs-extra": "^8.1.0",
+    "handlebars": "^4.7.2",
+    "inquirer": "^7.0.3",
+    "puppeteer": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schoe14/Developer-Profile-Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/schoe14/Developer-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/schoe14/Developer-Profile-Generator#readme"
+}
