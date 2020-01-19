@@ -51,7 +51,7 @@ async function getGithubData() {
 
     const locationSearch = () => {
         if (data.location != null && data.location.includes(" ")) {
-            return data.location.split(" ")[0] + "%20" + data.location.split(" ")[1];
+            return `${data.location.split(" ")[0]}%20${data.location.split(" ")[1]}`;
         }
         else return data.location;
     }
