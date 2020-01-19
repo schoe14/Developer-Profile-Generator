@@ -11,57 +11,77 @@
     <title>Document</title>
 </head>
 <style>
-    html, body {
+    html,
+    body {
         font-family: 'Rambla', sans-serif;
+        height: 90vh;
+        width: 100%;
+        background: #F9F6F7;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .row {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    @media (min-width: 576px) {
+        .container {
+            max-width: 600px;
+        }
     }
 </style>
-<body>
-    <div class="jumbotron jumbotron-fluid my-0" id="main" style="text-align: center; background-color: #F9F6F7;">
 
-        <div class="container top py-4" style="background-color: {{favoriteColor}};">
+<body>
+    <div class="container container-fluid px-0 mx-auto" id="main"
+        style="text-align: center; margin-top: 30px; background-color: #F9F6F7;">
+        <div class="container py-4" id="top" style="background-color: {{favoriteColor}};">
             <div id="image" style="margin-bottom: 10px;">
-                <!-- https://avatars1.githubusercontent.com/u/49009076?v=4 -->
-                <!-- {{profileImg}} -->
-                <img src={{profileImg}} class="rounded-circle"
-                    style="width: 150px; height: auto;">
+                <img src={{profileImg}} class="rounded-circle" style="width: 150px; height: auto;">
             </div>
             <div id="greeting" class="display-4">
                 <h1>Hi!</h1>
                 <h2>My name is {{name}}!</h2>
             </div>
             <div id="info">
-                <span class="location"><i style="font-size:24px" class="fa">&#xf124;</i> <a
-                        href={{locationLink}}>{{location}}  </a></span>
-                <span class="github"><i style="font-size:24px" class="fa">&#xf09b;</i> <a
-                        href={{githubProfile}}>GitHub  </a></span>
-                <span class="blog"><i style="font-size:24px" class="fa">&#xf005;</i>
+                <span class="location"><i style="font-size:20px" class="fa">&#xf124;</i> <a
+                        href={{locationLink}}>{{location}} </a></span>
+                <span class="github"><i style="font-size:20px" class="fa">&#xf09b;</i> <a href={{githubProfile}}>GitHub
+                    </a></span>
+                <span class="blog"><i style="font-size:20px" class="fa">&#xf005;</i>
                     <a href={{blog}}>Blog</a></span>
             </div>
         </div>
 
-        <div class="container bottom" style="text-align: center;">
-            <div class="bio" style="margin-top: 30px; margin-bottom: 20px">
+        <div class="container" id="bottom" style="text-align: center;">
+            <div class="bio" style="margin-top: 40px; margin-bottom: 30px">
                 <h4>{{bio}}</h4>
             </div>
-            <div class="row" style="margin-top: 40px; margin-bottom: 20px">
-                <div class="col-5 py-4" style="background-color: {{favoriteColor}};">
-                    <h5>Public Repositories:</h5>
+            <div class="row">
+                <div class="col-5 py-4 mx-auto" style="background-color: {{favoriteColor}};">
+                    <h4>Public Repositories:</h4>
                     <p>{{publicRepos}}</p>
                 </div>
-                <div class="col-2"></div>
-                <div class="col-5 py-4" style="background-color: {{favoriteColor}};">
-                    <h5>Followers:</h5>
+                <div class="col-5 py-4 mx-auto" style="background-color: {{favoriteColor}};">
+                    <h4>Followers:</h4>
                     <p>{{followers}}</p>
                 </div>
             </div>
-            <div class="row" style="margin-top: 40px; margin-bottom: 20px">
-                <div class="col-5 py-4" style="background-color: {{favoriteColor}};">
-                    <h5>GitHub Stars:</h5>
+            <div class="row">
+                <div class="col-5 py-4 mx-auto" style="background-color: {{favoriteColor}};">
+                    <h4>GitHub Stars:</h4>
                     <p>{{githubStars}}</p>
                 </div>
-                <div class="col-2"></div>
-                <div class="col-5 py-4" style="background-color: {{favoriteColor}};">
-                    <h5>Following:</h5>
+                <div class="col-5 py-4 mx-auto" style="background-color: {{favoriteColor}};">
+                    <h4>Following:</h4>
                     <p>{{following}}</p>
                 </div>
             </div>

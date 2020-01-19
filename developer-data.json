@@ -1,8 +1,9 @@
 {
+  "login": "schoe14",
   "profileImg": "https://avatars1.githubusercontent.com/u/49009076?v=4",
   "name": "Seohui Choe",
   "location": "Richmond, VA",
-  "locationLink": "https://www.google.com/maps/place/Richmond, VA",
+  "locationLink": "https://www.google.com/maps/place/Richmond,%20VA",
   "githubProfile": "https://github.com/schoe14",
   "blog": "https://schoe14.github.io/Professional-Portfolio/",
   "bio": "Full Stack Developer certified at University of Richmond.",
@@ -10,5 +11,5 @@
   "followers": 19,
   "githubStars": 7,
   "following": 19,
-  "favoriteColor": "salmon"
+  "favoriteColor": "pink"
 }
