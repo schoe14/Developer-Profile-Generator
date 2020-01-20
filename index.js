@@ -9,6 +9,7 @@ const path = require('path');
 const readFileAsync = util.promisify(fs.readFile);
 const writeFileAsync = util.promisify(fs.writeFile);
 
+// Complie html file and json file using handlebars
 const compile = async function (templateName, data) {
     const filePath = path.join(process.cwd(), 'templates', `${templateName}.hbs`);
     const html = await readFileAsync(
@@ -18,6 +19,7 @@ const compile = async function (templateName, data) {
     return hbs.compile(html)(data);
 };
 
+// Asks users their GitHub user name and favorite color
 function promptUser() {
     return inquirer.prompt([
         {
@@ -34,6 +36,7 @@ function promptUser() {
     ]);
 }
 
+// Makes axios call to collect user's data based on user information provided
 async function getGithubData() {
     const answers = await promptUser();
 
@@ -52,7 +55,7 @@ async function getGithubData() {
 
     const locationSearch = () => {
         if (data.location != null && data.location.includes(" ")) {
-            return `${data.location.split(" ")[0]}%20${data.location.split(" ")[1]}`;
+            return data.location.split(" ").join("%20");
         }
         else return data.location;
     }
@@ -74,6 +77,7 @@ async function getGithubData() {
     else return infoObj.name;
 }
 
+// Generates pdf file using puppeteer
 (async function () {
     try {
         const browser = await puppeteer.launch();
@@ -104,6 +108,6 @@ async function getGithubData() {
         process.exit();
 
     } catch (e) {
-        console.log('error', e);
+        console.log('Your GitHub user name is invalid or previously generated pdf file is open', e);
     }
 })();
