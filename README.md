@@ -4,8 +4,7 @@ A command-line application that dynamically generates a PDF profile from a GitHu
 It prompts user's favorite color to effectively format the pdf!
 
 # Screenshots
-<img src="./demo/demo1.gif" style="float: left">
-<img src="./demo/demo2.gif" style="float: left"></a>
+<img src="./demo/demo.gif" style="float: left">
 
 # Tech/framework used
 * Programming Languages: JavaScript, HTML, CSS

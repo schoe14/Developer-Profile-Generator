@@ -23,12 +23,13 @@ function promptUser() {
         {
             type: "input",
             name: "userName",
-            message: "What is your GitHub user name?"
+            message: "What is your GitHub user name?",
         },
         {
-            type: "input",
+            type: "list",
             name: "color",
-            message: "What is your favorite color?"
+            message: "What is your favorite color?",
+            choices: ["orange", "turquoise", "pink", "violet", "lightgreen"],
         }
     ]);
 }
